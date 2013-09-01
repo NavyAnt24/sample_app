@@ -4,9 +4,10 @@
 <div class="row">
 	<div class="span6 offset3">
 		<%= form_for(@user) do |f| %>
-			<%= render 'shared/error_messages' %>
+			<%= render 'shared/error_messages', object: f.object %>
+			<%= render 'fields', f: f %>
 
-			<%= f.label :name %>
+<!--		<%= f.label :name %>
 			<%= f.text_field :name %>
 
 			<%= f.label :email %>
@@ -17,6 +18,7 @@
 
 			<%= f.label :password_confirmation, "Confirmation" %>
 			<%= f.password_field :password_confirmation %>
+-->
 
 			<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
 		<% end %>
